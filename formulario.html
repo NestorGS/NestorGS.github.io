@@ -1,82 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="estylo.scc" type="text/scc" media="screen">
+    <link rel="stylesheet" href="estylo.css" type="text/css" media="screen">
     <style>
-            label {
-    display:block;
-    margin-top:20px;
-    letter-spacing:1px;
-}
- 
-.principal {
-    display:block;
-    margin:0 auto;
-    width:510px;
-    color: #666666;
-    font-family:Arial;
-}
- 
-form {
-    margin:0 auto;
-    width:400px;
-}
- 
-.cajas{
-    width:380px;
-    height:15px;
-    background:#666666;
-    border:2px solid #f6f6f6;
-    padding:10px;
-    margin-top:5px;
-    font-size:10px;
-    color:#ffffff;
-}
-select{
-    width:400px;
-    height:40px;
-    background:#666666;
-    border:2px solid #f6f6f6;
-    padding:10px;
-    margin-top:5px;
-    font-size:12px;
-    color:#ffffff;
-}
-textarea {
-    height:150px;
-}
- 
-.boton{
-    width:85px;
-    height:40px;
-    border:none;
-    margin-top:20px;
-    cursor:pointer;
-}
+        label {
+            display: block;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .principal {
+            display: block;
+            margin: 0 auto;
+            width: 510px;
+            color: #666666;
+            font-family: Arial;
+        }
+        
+        form {
+            margin: 0 auto;
+            width: 400px;
+        }
+        
+        .cajas {
+            width: 380px;
+            height: 15px;
+            background: #666666;
+            border: 2px solid #f6f6f6;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 10px;
+            color: #ffffff;
+        }
+        
+        select {
+            width: 400px;
+            height: 40px;
+            background: #666666;
+            border: 2px solid #f6f6f6;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #ffffff;
+        }
+        
+        textarea {
+            height: 150px;
+        }
+        
+        .boton {
+            width: 85px;
+            height: 40px;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <div class="principal ">
-        <form method="get" name="registro" onsubmit="return validar(this)" action="index.html">
-            <label for="">Nombre:</label>
-            <input class="cajas" type="text" name="Nombre" id="nombre">
+    <div class="principal">
+        <form method="get" name="registro" onsubmit="return validar(this)" action="formulario.html">
+            <label for="nombre">Nombre:</label>
+            <input class="cajas" type="text" name="nombre" id="nombre">
             <br><br>
-            <label for="">Edad:</label>
+            <label for="edad">Edad:</label>
             <input class="cajas" type="text" name="edad" id="edad">
             <br><br>
             <legend>Selecciona un sexo:</legend>
             <blockquote>
-                <label for="">Femenino</label>
+                <label for="femenino">Femenino</label>
                 <input class="cajas" type="radio" name="sexo" value="femenino">
                 
-                <label for="">Masculino</label>
+                <label for="masculino">Masculino</label>
                 <input class="cajas" type="radio" name="sexo" value="masculino">
             </blockquote>
-            <label for="">
+            <label for="deporte">
                 <span>Deporte Favorito</span>
                 <select name="deporte" id="deporte">
                     <option value="futbol">Futbol</option>
@@ -84,12 +85,41 @@ textarea {
                     <option value="tenis">Tenis</option>
                     <option value="beisbol">Beisbol</option>
                     <option value="ninguno">Ninguno</option>
-
                 </select>
             </label>
             <input class="boton" type="submit" id="enviar" value="Enviar">
-            <input type="submit" class="boton" id="reset" value="Reset">
+            <input type="reset" class="boton" id="reset" value="Reset">
         </form>
     </div>
+
+    <script>
+        function validar(form) {
+            let nombre = form.nombre.value.trim();
+            if (nombre == "") {
+                alert("Por favor, ingrese su nombre");
+                return false;
+            }
+
+            let edad = form.edad.value.trim();
+            if (edad === "" || isNaN(edad) || edad < 0) {
+                alert("Por favor, ingrese una edad válida");
+                return false;
+            }
+
+            let sexo = form.sexo.value;
+            if (sexo == "") {
+                alert("Por favor, seleccione un sexo");
+                return false;
+            }
+
+            let deporte = form.deporte.value;
+            if (deporte === "ninguno") {
+                alert("Por favor, seleccione un deporte");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 </html>
