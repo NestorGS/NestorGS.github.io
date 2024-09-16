@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estylo.css" type="text/css" media="screen">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="estylo.css">
     <style>
         label {
             display: block;
@@ -58,11 +58,37 @@
             margin-top: 20px;
             cursor: pointer;
         }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .principal, form {
+                width: 90%;
+            }
+            
+            .cajas, select {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .principal, form {
+                width: 95%;
+            }
+            
+            .cajas, select {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            .boton {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="principal">
-       <form method="get" name="registro" onsubmit="return validar(this)" action="formulario.html">
+        <form method="get" name="registro" onsubmit="return validar(this)" action="formulario.html">
             <label for="nombre">Nombre:</label>
             <input class="cajas" type="text" name="nombre" id="nombre">
             <br><br>
@@ -95,26 +121,26 @@
     <script>
         function validar(form) {
             let nombre = form.nombre.value.trim();
-            if (nombre == "") {
-                alert("Por favor, ingrese su nombre");
+            if (nombre === "") {
+                alert("Por favor, ingrese su nombre.");
                 return false;
             }
 
             let edad = form.edad.value.trim();
             if (edad === "" || isNaN(edad) || edad < 0) {
-                alert("Por favor, ingrese una edad válida");
+                alert("Por favor, ingrese una edad válida.");
                 return false;
             }
 
             let sexo = form.sexo.value;
-            if (sexo == "") {
-                alert("Por favor, seleccione un sexo");
+            if (!sexo) {
+                alert("Por favor, seleccione un sexo.");
                 return false;
             }
 
             let deporte = form.deporte.value;
             if (deporte === "ninguno") {
-                alert("Por favor, seleccione un deporte");
+                alert("Por favor, seleccione un deporte.");
                 return false;
             }
 
