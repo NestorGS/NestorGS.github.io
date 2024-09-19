@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora de Horas Extras</title>
+    <link rel="stylesheet" href="styleoras.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Pago por Horas Extras</h1>
+        <form id="extraHoursForm">
+            <div class="input-group">
+                <label for="hourlyWage">Salario por hora:</label>
+                <input type="number" id="hourlyWage" placeholder="Ej. 10" required>
+            </div>
+            <div class="input-group">
+                <label for="totalHours">Horas trabajadas en la semana:</label>
+                <input type="number" id="totalHours" placeholder="Ej. 45" required>
+            </div>
+            <button type="submit">Calcular Pago</button>
+        </form>
+        <div class="result" id="extraPayResult"></div>
+    </div>
+
+    <script src="scriptoras.js"></script>
+</body>
+</html>

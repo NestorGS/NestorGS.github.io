@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Comisiones</title>
+    <link rel="stylesheet" href="stylessueldo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Sueldo y Comisiones</h1>
+        <form id="commissionForm">
+            <label for="baseSalary">Sueldo base:</label>
+            <input type="number" id="baseSalary" placeholder="Ingrese su sueldo base" required>
+
+            <label for="sales1">Venta 1:</label>
+            <input type="number" id="sales1" placeholder="Ingrese el monto de la venta 1" required>
+
+            <label for="sales2">Venta 2:</label>
+            <input type="number" id="sales2" placeholder="Ingrese el monto de la venta 2" required>
+
+            <label for="sales3">Venta 3:</label>
+            <input type="number" id="sales3" placeholder="Ingrese el monto de la venta 3" required>
+
+            <button type="submit">Calcular Sueldo Total</button>
+        </form>
+        <div class="result" id="commissionResult"></div>
+    </div>
+
+    <script src="scriptsueldo.js"></script>
+</body>
+</html>

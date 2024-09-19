@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora de Calificación Final</title>
+    <link rel="stylesheet" href="stylesalgoritmo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Calificación Final</h1>
+        <form id="gradeForm">
+            <div class="input-group">
+                <label for="partial1">Calificación Parcial 1:</label>
+                <input type="number" id="partial1" placeholder="Ingresa tu calificación" min="0" max="100" required>
+            </div>
+            <div class="input-group">
+                <label for="partial2">Calificación Parcial 2:</label>
+                <input type="number" id="partial2" placeholder="Ingresa tu calificación" min="0" max="100" required>
+            </div>
+            <div class="input-group">
+                <label for="partial3">Calificación Parcial 3:</label>
+                <input type="number" id="partial3" placeholder="Ingresa tu calificación" min="0" max="100" required>
+            </div>
+            <div class="input-group">
+                <label for="finalExam">Calificación Examen Final:</label>
+                <input type="number" id="finalExam" placeholder="Ingresa tu calificación" min="0" max="100" required>
+            </div>
+            <div class="input-group">
+                <label for="finalWork">Calificación Trabajo Final:</label>
+                <input type="number" id="finalWork" placeholder="Ingresa tu calificación" min="0" max="100" required>
+            </div>
+            <button type="submit">Calcular Calificación Final</button>
+        </form>
+        <div class="result" id="gradeResult"></div>
+    </div>
+
+    <script src="scriptalgoritmo.js "></script>
+</body>
+</html>

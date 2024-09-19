@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eliminar Etiquetas Peligrosas</title>
+    <link rel="stylesheet" href="styleseti.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Filtro de Etiquetas Peligrosas</h1>
+        <form id="htmlFilterForm">
+            <div class="input-group">
+                <label for="htmlInput">Introduce código HTML:</label>
+                <textarea id="htmlInput" rows="5" required></textarea>
+                <span class="error" id="htmlError"></span>
+            </div>
+            <button type="submit">Limpiar HTML</button>
+        </form>
+        <div class="result" id="result">
+            <h2>Resultado Limpio:</h2>
+            <div id="cleanHtml"></div>
+        </div>
+    </div>
+
+    <script src="scriptesti.js"></script>
+</body>
+</html>
